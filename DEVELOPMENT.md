@@ -92,6 +92,11 @@ Esses ajustes ajudam a manter o foco nos aspectos mais relevantes para o desenvo
         <a href="https://github.com/WesleyTMarques " ><b>Wesley Marques</b></a><br>
         <i>FrontEnd</i>
       </td>
+      <td align="center">
+        <img src="https://avatars.githubusercontent.com/u/50967217?v=4" width="100" ><br>
+        <a href="https://github.com/neresfabio" ><b>Fábio Neres</b></a><br>
+        <i>Tech Lead</i>
+      </td>
     </tr>
   </table>
 </div>
