@@ -19,4 +19,4 @@ Uma breve descrição sobre o que esse projeto faz e para quem ele é
 - Lineker – Backend
 - Wesley - Frotend
 - Karine - Frontend
-- Neres TeachLead
+- Neres - Teach Lead
