@@ -5,15 +5,18 @@ Uma breve descrição sobre o que esse projeto faz e para quem ele é
 
 ## Equipe
 
-- Samantha - UI/UX
-- Victor - PO
+- Juliana - SM
+- Fernando - SM
+- Jefferson – SM
+- Victor – PO
 - Mayara - PO
-- Rafaela - SM
-- Emily - SM
-- Patricia - QA
-- Gilliard - QA
-- Neander - Dev backend
-- Guilherme - Dev Backend
-- Lineker- Dev Backend
-- Jhonson - Dev Frontend
-- Karine Pereira - Dev Frontend
+- Arnaldo – UX/UI
+- Gabriela – UX/UI
+- Letícia – UX
+- Patrícia – QA
+- Gilliard – QA
+- Neander – Backend
+- Lineker – Backend
+- Wesley - Frotend
+- Karine - Frontend
+- Neres TeachLead
