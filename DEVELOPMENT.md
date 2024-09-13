@@ -358,6 +358,88 @@ Isso integrará as últimas mudanças da branch `develop` na sua branch `feature
 
 </details>
 
+---
+
+## Para baixar o projeto do seu repositório GitHub e começar a trabalhar a partir da branch `service`, siga os passos abaixo:
+
+### 1. Clonar o Repositório
+
+Primeiro, você precisa clonar o repositório para a sua máquina local. Abra o terminal e execute o seguinte comando:
+
+```bash
+git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+```
+
+Substitua `SEU_USUARIO` e `NOME_DO_REPOSITORIO` pela sua informação.
+
+### 2. Navegar até o Diretório do Repositório
+
+Depois de clonar, navegue até o diretório do repositório:
+
+```bash
+cd NOME_DO_REPOSITORIO
+```
+
+### 3. Verificar as Branches
+
+Verifique se a branch `service` está disponível:
+
+```bash
+git branch -a
+```
+
+Isso listará todas as branches, tanto locais quanto remotas.
+
+### 4. Mudar para a Branch `service`
+
+Se a branch `service` já estiver disponível, você pode mudar para ela usando:
+
+```bash
+git checkout service
+```
+
+Caso a branch `service` ainda não esteja disponível localmente, você pode criá-la a partir da versão remota:
+
+```bash
+git checkout -b service origin/service
+```
+
+### 5. Começar a Trabalhar
+
+Agora você pode começar a trabalhar na branch `service`. Você pode editar arquivos, adicionar novos, etc.
+
+### 6. Adicionar e Fazer Commit das Alterações
+
+Depois de fazer suas alterações, adicione e faça commit delas:
+
+```bash
+git add .
+git commit -m "Sua mensagem de commit"
+```
+
+### 7. Enviar as Alterações para o Repositório Remoto
+
+Para enviar suas alterações de volta para o GitHub, use:
+
+```bash
+git push origin service
+```
+
+### Resumo dos Comandos
+
+```bash
+git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+cd NOME_DO_REPOSITORIO
+git branch -a
+git checkout service  # ou git checkout -b service origin/service
+# Faça suas alterações
+git add .
+git commit -m "Sua mensagem de commit"
+git push origin service
+```
+
+Agora você está pronto para trabalhar na branch `service` do seu repositório localmente!
+
 
 ## Considerações Finais
 
