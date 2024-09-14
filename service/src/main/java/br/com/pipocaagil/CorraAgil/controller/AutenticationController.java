@@ -30,6 +30,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/corragil/v1")
 public class AutenticationController {
+    // Teste 
     @Autowired
     private AuthenticationManager manager;
     @Autowired
