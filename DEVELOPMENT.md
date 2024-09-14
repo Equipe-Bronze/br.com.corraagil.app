@@ -265,99 +265,56 @@ Este guia fornece uma visão geral dos comandos mais utilizados para trabalhar c
 
 <details>
 <summary>
- Atualizar Branch Filha
+ Criando Fluxo de branch
 </summary>
 
-**Para atualizar uma branch filha com as mudanças da branch pai, você pode seguir um dos métodos abaixo**:
+> Clonar repositorio remoto.
 
-### 1. **Usando `merge`**
-Este método é utilizado quando você quer incorporar as mudanças da branch pai (por exemplo, `develop`) na branch filha (por exemplo, `client`).
+```
+ git clone <url_repositorio>
+```
+> criar branch `develop`
+
+**Cria uma nova branch e muda para ela**. (Apartir da main)
+
+```
+git checkout -b <nova-branch>
+```
+> Usando merge
+
+Este método é utilizado quando você quer incorporar as mudanças da branch pai (por exemplo, main) na branch filha (por exemplo, develop).
 
 ```bash
-# Vá para a branch filha (client)
-git checkout client
-
-# Faça o merge da branch pai (develop) na branch filha (client)
-git merge develop
+# Faça o merge da branch pai (main) na branch filha (develop)
+git merge main
 ```
 
-### 2. **Usando `rebase`**
-Este método reescreve o histórico da branch filha para parecer que ela foi criada a partir do commit mais recente da branch pai. Isso é útil para manter um histórico de commits mais linear.
+> **Subindo a branch criada. Confirme que está na branch correta para subir para o repositório remoto** (caso não esteja, mude para a branch que deseja subir):
 
 ```bash
-# Vá para a branch filha (client)
-git checkout client
-
-# Faça o rebase da branch filha (client) com a branch pai (develop)
-git rebase develop
+# Mostra em que branch esta
+git checkout <nome-da-branch>
 ```
-
-### Considerações
-- **`merge`** cria um commit de merge, o que pode ser útil para manter um histórico claro de quando as mudanças foram integradas.
-- **`rebase`** reescreve o histórico e é útil para manter um histórico mais limpo e linear, mas pode ser mais complexo de usar, especialmente se houver conflitos.
-
-Escolha o método que melhor se adapta ao fluxo de trabalho do seu projeto.
-</details>
-
-<details>
-    <summary>Atualizando Branch</summary>
-    Para puxar as atualizações da branch pai para a sua branch atual, você pode usar um dos seguintes comandos, dependendo da estratégia de integração que você deseja adotar:
-
-### 1. **Merge (Padrão)**
-
-Essa opção criará um merge commit, combinando as mudanças da branch pai com a sua branch atual.
 
 ```bash
-git merge nome-da-branch-pai
+# Sobe a nova branch para o repositório remoto
+git push origin <nome-da-branch>
+
 ```
+> Caso queira configurar a branch local para acompanhar automaticamente as alterações da branch remota no futuro:
 
-### 2. **Rebase**
-
-Essa opção aplicará as mudanças da branch pai no topo da sua branch atual, mantendo um histórico linear.
-
-```bash
-git rebase nome-da-branch-pai
 ```
+git push --set-upstream origin <nome-da-branch>
 
-### 3. **Fast-forward**
-
-Se você sabe que as mudanças na sua branch atual podem ser aplicadas diretamente após as mudanças da branch pai (sem a necessidade de um merge commit), use:
-
-```bash
-git merge --ff-only nome-da-branch-pai
 ```
+Para criar as barnch seguites basta estar na branch `develop` e refazer os comandos anteriores e atribuir os nomes das novas branch.
 
-### Passo a Passo
-
-1. **Certifique-se de estar na sua branch atual:**
-
-   ```bash
-   git checkout sua-branch
-   ```
-
-2. **Puxe as últimas atualizações da branch pai para garantir que você está sincronizado com o repositório remoto:**
-
-   ```bash
-   git fetch origin nome-da-branch-pai
-   ```
-
-3. **Realize a integração usando uma das estratégias acima:**
-   - Com `git merge`, `git rebase` ou `git merge --ff-only`, conforme explicado.
-
-### Exemplo
-
-Se sua branch atual é `feature` e a branch pai é `develop`, você faria o seguinte:
-
-```bash
-git checkout feature
-git fetch origin develop
-git merge develop   # ou git rebase develop
 ```
-
-Isso integrará as últimas mudanças da branch `develop` na sua branch `feature`.
+* develop
+  main
+```
 
 </details>
-
 
 ## Considerações Finais
 
